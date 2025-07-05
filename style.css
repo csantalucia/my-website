@@ -126,10 +126,3 @@ p, li {
   background-color: var(--accent-blue);
 }
 
-footer {
-  text-align: center;
-  padding: 3rem 1rem;
-  font-size: 0.85rem;
-  color: #888;
-  border-top: 1px solid #eee;
-}
