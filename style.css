@@ -1,17 +1,18 @@
 :root {
-  --bg: #ffffff;
-  --text: #111111;
+  --bg: #F5F5F5;
+  --text: #777777;
   --accent-red: #ff3b3b;
   --accent-blue: #00a8ff;
   --accent-yellow: #ffe000;
   --accent-green: #00c48c;
-  --link-hover: var(--accent-red);
+  --accent-hover: #4444;
+  --link-hover: var(--accent-hover);
 }
 
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Georgia', serif;
+  font-family: "Century Gothic", sans-serif;
   background-color: var(--bg);
   color: var(--text);
   line-height: 1.6;
@@ -20,23 +21,23 @@ body {
 nav {
   background-color: var(--bg);
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
-  padding: 1.5rem 2rem;
-  border-bottom: 1px solid #ddd;
+  padding: 1.5rem 1.5rem;
+  border-bottom: 1.5px solid #ddd;
 }
 
 nav h1 {
-  font-family: 'Georgia', serif;
+  font-family: "Century Gothic", sans-serif;
   font-size: 1.5rem;
-  font-weight: bold;
-  letter-spacing: 2px;
+  font-weight: normal;
+  letter-spacing: 1px;
   text-transform: uppercase;
-  margin: 0;
+  margin: 0 2.5rem 0 0;
 }
 
 nav h1 a {
-  font-family: 'Georgia', serif;
+  font-family: "Century Gothic", sans-serif;
   font-size: 1.5rem;
   text-decoration: none;
   color: inherit;
@@ -45,33 +46,25 @@ nav h1 a {
 
 nav ul {
   list-style: none;
+  align-items: center;
   display: flex;
   gap: 2rem;
   margin: 0;
-  padding: 0;
+  padding: 0rem;
 }
 
-nav a {
-  font-size: 1rem;
-  font-family: 'Georgia', serif;
+nav a, li {
+  font-size: .8rem;
+  font-family: "Century Gothic", sans-serif;
   text-decoration: none;
   color: var(--text);
+  text-transform: uppercase;
   position: relative;
+  transition: color 0.3s ease;
 }
 
-nav a::after {
-  content: '';
-  position: absolute;
-  bottom: -3px;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background-color: var(--link-hover);
-  transition: width 0.3s ease;
-}
-
-nav a:hover::after {
-  width: 100%;
+nav a:hover{
+  color: var(--link-hover);
 }
 
 section {
@@ -81,18 +74,30 @@ section {
 }
 
 h2 {
-  font-family: 'Georgia', serif;
-  font-size: 2rem;
+  font-family: "Century Gothic", sans-serif;
+  font-size: 1.5rem;
+  font-weight: normal;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 1.1px;
   margin-bottom: 1.5rem;
   color: var(--text);
 }
 
-p, li {
-  font-family: 'Georgia', serif;
+p {
+  font-family: "Century Gothic", sans-serif;
   font-size: 1rem;
   margin-bottom: 1rem;
+}
+
+p a{
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--text);
+  transition: color 0.3s ease;
+}
+
+p a:hover {
+  color: var(--link-hover);
 }
 
 .art-gallery {
@@ -110,19 +115,18 @@ p, li {
 
 .download-btn {
   display: inline-block;
-  padding: 0.75rem 1.5rem;
-  font-family: 'Georgia', serif;
+  padding: 0.25rem .75rem;
+  font-family: "Century Gothic", sans-serif;
   font-size: 1rem;
-  background-color: var(--accent-green);
-  color: white;
+  background-color: var(--bg);
+  color: var(--text);
   text-decoration: none;
   border: none;
   border-radius: 2px;
   margin-top: 1rem;
-  transition: background-color 0.3s ease;
+  transition: color 0.3s ease;
 }
 
 .download-btn:hover {
-  background-color: var(--accent-blue);
+  color: var(--link-hover);
 }
-
